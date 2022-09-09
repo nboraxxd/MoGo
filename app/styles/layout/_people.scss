@@ -1,0 +1,104 @@
+.people {
+  padding: 11rem 0 6rem;
+  background: linear-gradient(to bottom, rgba(#fff, 0.85), rgba(#fff, 0.85)),
+    url(../images/img-people-bg.png) no-repeat center / cover;
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 4rem;
+    margin-top: 9rem;
+  }
+  &-item {
+    width: calc(100% / 2 - 4.25rem);
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 7rem;
+  }
+  &-image {
+    border-radius: 50%;
+    width: 11.5rem;
+    height: 11.5rem;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  &-content {
+    margin-top: 1.2rem;
+    margin-left: 3rem;
+    &-name {
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+    &-position {
+      color: $text-color;
+      display: inline-block;
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 6rem;
+        background-color: $primary-color;
+        left: 0;
+        bottom: 0;
+      }
+    }
+    &-description {
+      font-family: $secondary-font;
+      font-size: 15px;
+      line-height: 1.4;
+      color: $text-color;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .people {
+    padding: 5rem 0 2rem;
+    &-list {
+      margin-top: 0;
+      padding: 0;
+    }
+    &-item {
+      width: calc(100% / 2 - 1.5rem);
+      margin-bottom: 4rem;
+    }
+    &-content {
+      margin-top: 0.7rem;
+      margin-left: 1.5rem;
+      &-name {
+        margin-bottom: 1rem;
+      }
+      &-position {
+        padding-bottom: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+    &-image {
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .people {
+    &-item {
+      width: 100%;
+      margin-bottom: 3rem;
+
+    }
+    &-image {
+      width: 8rem;
+      height: 8rem;
+    }
+  }
+}

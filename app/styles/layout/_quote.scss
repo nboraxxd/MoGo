@@ -1,0 +1,148 @@
+.quote {
+  background-color: $gray-color;
+  padding: 6.5rem 0;
+  &-container {
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+  }
+  &-arrow-left,
+  &-arrow-right {
+    font-size: 30px;
+    color: $gray-dark;
+    cursor: pointer;
+    padding: 1rem 2.5rem;
+  }
+  &-main {
+    padding: 0 6rem;
+    display: flex;
+    align-items: center;
+  }
+  &-image {
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border: 3px solid $third-color;
+    margin-right: 6rem;
+  }
+  &-content {
+    &-text {
+      font-family: $secondary-font;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 24px;
+      line-height: 1.4;
+      color: $text-color;
+      margin-bottom: 2rem;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &::before {
+        content: open-quote;
+      }
+      &::after {
+        content: close-quote;
+      }
+    }
+    &-author {
+      font-family: $third-font;
+      font-size: 24px;
+      color: $title-color;
+      position: relative;
+      padding-left: 7rem;
+      &::before {
+        content: '';
+        background-color: $primary-color;
+        height: 3px;
+        width: 6rem;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  .slick-initialized .slick-slide {
+    display: flex;
+  }
+  .slick-arrow {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: $gray-dark;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .slick-prev {
+    left: 0;
+    z-index: 99;
+  }
+  .slick-next {
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .quote {
+    &-arrow-left,
+    &-arrow-right {
+      display: none;
+    }
+    &-main {
+      padding: 0 5rem;
+    }
+    &-image {
+      width: 9rem;
+      height: 9rem;
+      margin-right: 3rem;
+      img {
+        max-width: 55%;
+      }
+    }
+    &-content-text {
+      font-size: 20px;
+      margin-bottom: 1.5rem;
+    }
+    &-content-author {
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .quote {
+    padding: 4rem 0;
+    &-main {
+      padding: 0;
+      margin: 0 1rem;
+      flex-direction: column;
+    }
+    &-image {
+      margin-right: 0rem;
+      margin-bottom: 2rem;
+    }
+    &-content-author {
+      font-size: 16px;
+      padding-left: 3rem;
+      &::before {
+        height: 2px;
+        width: 2.5rem;
+      }
+    }
+    &-content-text {
+      font-size: 16px;
+      text-align: justify;
+      margin-bottom: 1rem;
+      display: block;
+    }
+  }
+}

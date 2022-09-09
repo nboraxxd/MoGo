@@ -1,0 +1,31 @@
+.map {
+  padding: 5.5rem 0;
+  background: linear-gradient(to bottom, rgba(#fff, 0.85), rgba(#fff, 0.85)),
+    url('../images/img-map.png');
+  &-container {
+    text-align: center;
+  }
+  &-icon {
+    margin-bottom: 2rem;
+    color: $primary-color;
+    font-size: 25px;
+  }
+  &-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: $primary-color;
+    text-transform: uppercase;
+    padding-bottom: 2.5rem;
+    position: relative;
+    &::before {
+      content: '';
+      height: 3px;
+      width: 6rem;
+      background-color: $primary-color;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

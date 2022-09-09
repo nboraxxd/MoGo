@@ -1,0 +1,255 @@
+.footer {
+  background-color: $gray-color;
+  &-inner {
+    padding: 7.5rem 0 7rem;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  &-contact {
+    width: calc(42.5% - 3rem);
+    margin-right: 3rem;
+    &-brand {
+      font-size: 46px;
+      font-weight: bold;
+      color: $gray-dark;
+      margin-bottom: 4rem;
+      display: block;
+    }
+    &-description {
+      color: $text-color;
+      line-height: 1.4;
+      margin-bottom: 4.5rem;
+    }
+    &-followers {
+      padding-bottom: 2rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #e5e5e5;
+      strong {
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
+    &-social {
+      display: flex;
+      margin-bottom: 4rem;
+      span {
+        text-transform: capitalize;
+        color: $text-color;
+      }
+    }
+    &-list {
+      margin-left: 0.5rem;
+    }
+    &-link {
+      font-size: 16px;
+      color: $third-color;
+      margin-left: 1rem;
+      padding: 0.25rem;
+    }
+    &-form {
+      width: 100%;
+      max-width: 38rem;
+      display: flex;
+    }
+    &-input {
+      padding: 1.3rem;
+      border: 1px solid #e7e7e7;
+      border-right: none;
+      background-color: #fff;
+      outline: none;
+      flex-grow: 1;
+      color: $text-color;
+    }
+    &-btn {
+      cursor: pointer;
+      padding: 1.5rem 3.4rem;
+      text-transform: uppercase;
+      color: #fff;
+      font-weight: bold;
+      background-color: $third-color;
+      outline: none;
+      border: none;
+    }
+  }
+  &-heading {
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 1rem 0 4rem;
+  }
+  &-blog {
+    width: calc(35% - 8rem);
+    margin-right: 8rem;
+    &-item {
+      display: flex;
+      align-items: center;
+      &:not(:last-child) {
+        margin-bottom: 3.1rem;
+      }
+    }
+    &-link {
+      flex-shrink: 0;
+    }
+    &-image {
+      width: 12rem;
+      height: 8rem;
+      object-fit: cover;
+    }
+    &-title {
+      display: inline-block;
+      padding-left: 2rem;
+      margin-bottom: 1.5rem;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      line-height: 1.4;
+      color: $title-color;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+      max-width: 100%;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    &-date {
+      display: inline-block;
+      padding-left: 2rem;
+      font-size: 13px;
+      color: $text-color;
+    }
+  }
+  &-instagram {
+    width: calc(22.5%);
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2px;
+    }
+    &-item {
+      width: calc(100% / 3 - 4px / 3);
+      padding-bottom: calc(100% / 3);
+      height: 0;
+      position: relative;
+    }
+    &-image {
+      // height: 8.8rem;
+      // width: 8.8rem;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &-more {
+      display: block;
+      margin-top: 2rem;
+      color: $text-color;
+      font-size: 13px;
+    }
+  }
+  &-copyright {
+    padding: 2.4rem 0 2.2rem;
+    text-align: center;
+    font-weight: 500;
+    a {
+      color: $primary-color;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .footer {
+    &-inner {
+      padding: 4.5rem 0 4rem;
+    }
+    &-contact,
+    &-blog,
+    &-instagram {
+      width: 100%;
+    }
+    &-contact,
+    &-blog {
+      padding-bottom: 3rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    &-contact {
+      margin-right: 0;
+      &-brand {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      &-description {
+        margin-bottom: 2.5rem;
+      }
+      &-followers {
+        text-align: center;
+        padding-bottom: 0;
+        margin-bottom: 1.5rem;
+        border-bottom: none;
+      }
+      &-social {
+        justify-content: center;
+        align-items: center;
+      }
+      &-form {
+        margin: 0 auto;
+      }
+    }
+    &-heading {
+      text-align: center;
+      font-size: 24px;
+      margin: 1rem 0 2rem;
+    }
+    &-blog {
+      margin-right: 0;
+      &-image {
+        width: 18rem;
+        height: 12rem;
+      }
+      &-content {
+        width: 100%;
+      }
+    }
+    &-instagram {
+      &-more {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    &-contact {
+      &-social {
+        flex-direction: column;
+      }
+      &-list {
+        margin-top: 1rem;
+      }
+      &-form {
+        flex-direction: column;
+      }
+      &-input {
+        border-right: 1px solid #e7e7e7;
+        margin-bottom: 1rem;
+      }
+    }
+    &-blog {
+      margin-right: 0;
+      &-image {
+        width: 9rem;
+        height: 6rem;
+      }
+      &-title,
+      &-date {
+        padding-left: 1rem;
+      }
+    }
+  }
+}

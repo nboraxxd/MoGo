@@ -1,0 +1,24 @@
+mixin menuLink(href = '#', title)
+	li.header-menu-item
+		a.header-menu-link(href=href)=title
+
+mixin headerBottomItem(number, text)
+	.header-bottom-item
+		span.header-bottom-number=number
+		span.header-bottom-text=text
+
+mixin blockBox(caption, title, description)
+	.block-box
+		h3.block-box-caption=caption
+		h2.block-box-title=title
+		if description
+			p.block-box-description.text--style=description
+
+mixin wedoItem(src, title, description, angle = 'fa-angle-down', active = '')
+	.wedo-item(class=active)
+		.wedo-item-header
+			img.wedo-item-icon(src=src)
+			h3.wedo-item-title=title
+			i.wedo-item-arrow.fal(class=angle)
+		.wedo-item-text.text--style.text--light
+			.wedo-item-inner=description

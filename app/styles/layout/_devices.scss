@@ -1,0 +1,39 @@
+.devices {
+  padding-top: 10.5rem;
+  background: linear-gradient(to bottom, rgba(#fff, 0.85), rgba(#fff, 0.85)),
+    url(../images/img-device-bg.png) no-repeat center / cover;
+  &-image {
+    text-align: center;
+    position: relative;
+    &-ipad {
+      display: inline-block;
+      width: 45.6rem;
+    }
+    &-iphone {
+      position: absolute;
+      bottom: -6rem;
+      left: 50%;
+      margin-left: 140px;
+      width: 20rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .devices {
+    padding-top: 5rem;
+    &-image {
+      &-ipad {
+        margin-left: -30px;
+        width: 23rem;
+      }
+      &-iphone {
+        margin-left: 35px;
+        width: 100.877193px;
+        bottom: -28px;
+        ;
+      }
+    }
+  }
+}
+
